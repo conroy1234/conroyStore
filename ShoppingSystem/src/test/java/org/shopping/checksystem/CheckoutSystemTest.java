@@ -12,7 +12,7 @@ import org.shopping.constants.ConstantsEnum;
 import org.shopping.factory.ShoppingFactory;
 import org.shopping.mogel.ProductPriceCalculator;
 
-class CheckoutSystemTest {
+public class CheckoutSystemTest {
 	CheckoutSystem checkoutSystem;
 
 	@Test
@@ -27,9 +27,9 @@ class CheckoutSystemTest {
 		List<String> applist2 = Arrays.asList(ConstantsEnum.APPLE.toString(), ConstantsEnum.APPLE.toString());
 		List<String> applist3 = Arrays.asList(ConstantsEnum.APPLE.toString(), ConstantsEnum.APPLE.toString(),
 				ConstantsEnum.APPLE.toString());
-		assertThat("1 Apple", CheckoutSystem.generateReceipt(appleList), is("£0.60"));
-		assertThat("2 Apple", CheckoutSystem.generateReceipt(applist2), is("£0.60"));
-		assertThat("3 Apple", CheckoutSystem.generateReceipt(applist3), is("£1.20"));
+		assertThat("1 Apple", CheckoutSystem.generateReceipt(appleList), is("Â£0.60"));
+		assertThat("2 Apple", CheckoutSystem.generateReceipt(applist2), is("Â£0.60"));
+		assertThat("3 Apple", CheckoutSystem.generateReceipt(applist3), is("Â£1.20"));
 	}
 
 	@Test
@@ -42,10 +42,10 @@ class CheckoutSystemTest {
 		List<String> orangeList3 = Arrays.asList("Orange", "Orange", "Orange");
 		List<String> orangeList4 = Arrays.asList("Orange", "Orange", "Orange", "Orange");
 		// then
-		assertThat("1 Orange", CheckoutSystem.generateReceipt(orangeList), is("£0.25"));
-		assertThat("2 Orange", CheckoutSystem.generateReceipt(orangeList2), is("£0.50"));
-		assertThat("3 Orange", CheckoutSystem.generateReceipt(orangeList3), is("£0.50"));
-		assertThat("4 Orange", CheckoutSystem.generateReceipt(orangeList4), is("£0.75"));
+		assertThat("1 Orange", CheckoutSystem.generateReceipt(orangeList), is("Â£0.25"));
+		assertThat("2 Orange", CheckoutSystem.generateReceipt(orangeList2), is("Â£0.50"));
+		assertThat("3 Orange", CheckoutSystem.generateReceipt(orangeList3), is("Â£0.50"));
+		assertThat("4 Orange", CheckoutSystem.generateReceipt(orangeList4), is("Â£0.75"));
 	}
 
 	@Test
@@ -54,8 +54,8 @@ class CheckoutSystemTest {
 		List<String> orangeAppleList = Arrays.asList("Apple", "Apple", "Orange");
 		List<String> orangeAppleList2 = Arrays.asList("Apple", "Apple", "Orange", "Orange", "Orange");
 		// then
-		assertThat("2 Apple, 1 Orange", CheckoutSystem.generateReceipt(orangeAppleList), is("£0.85"));
-		assertThat("2 Apple, 3 Oranges", CheckoutSystem.generateReceipt(orangeAppleList2), is("£1.10"));
+		assertThat("2 Apple, 1 Orange", CheckoutSystem.generateReceipt(orangeAppleList), is("Â£0.85"));
+		assertThat("2 Apple, 3 Oranges", CheckoutSystem.generateReceipt(orangeAppleList2), is("Â£1.10"));
 		
 	}
 
