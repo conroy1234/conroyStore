@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class Buy3ForPriceOfTwoOrangeFactoryTest {
+public class Buy3ForPriceOfTwoOrangeFactoryTest {
 
 	 @Test
 	    public void buyThreeForThePriceOfTwo() throws Exception {
