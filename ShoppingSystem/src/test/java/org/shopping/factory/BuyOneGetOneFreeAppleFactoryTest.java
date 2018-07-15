@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class BuyOneGetOneFreeAppleFactoryTest {
+public class BuyOneGetOneFreeAppleFactoryTest {
 
 	@Test
     public void shouldApply_Buy1Get1_Offer() throws Exception {
